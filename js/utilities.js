@@ -23,41 +23,24 @@
 //   inputField.value = newCaseNumber;
 //   previousPriceField.innerText = newPriceValue;
 // }
-function updateCaseNumber(increase) {
-  const inputField = document.getElementById("case-number-field");
-  const previousCaseNumber = parseInt(inputField.value);
 
-  let newCaseNumber;
-  if (increase === true) {
-    newCaseNumber = previousCaseNumber + 1;
-  } else {
-    //case number cannot be negative
-    if (previousCaseNumber <= 0) {
-      newCaseNumber = 0;
-    } else {
-      newCaseNumber = previousCaseNumber - 1;
-    }
-  }
-
-  inputField.value = newCaseNumber;
-  return newCaseNumber;
-}
 //Update Phone number count
-function updatePhoneNumber(increase) {
-  const inputField = document.getElementById("phone-number-field");
+function updateNumber(increase, priceElementID) {
+  const inputField = document.getElementById(priceElementID);
+
   const inputFieldValue = parseInt(inputField.value);
-  let newPhoneNumber;
+  let newNumberCount;
   if (increase === true) {
-    newPhoneNumber = inputFieldValue + 1;
+    newNumberCount = inputFieldValue + 1;
   } else {
     if (inputFieldValue <= 0) {
-      newPhoneNumber = 0;
+      newNumberCount = 0;
     } else {
-      newPhoneNumber = inputFieldValue - 1;
+      newNumberCount = inputFieldValue - 1;
     }
   }
-  inputField.value = newPhoneNumber;
-  return newPhoneNumber;
+  inputField.value = newNumberCount;
+  return newNumberCount;
 }
 
 function updateTotalPrice(newNumber, priceElementID) {
@@ -70,16 +53,3 @@ function updateTotalPrice(newNumber, priceElementID) {
   }
   priceElement.innerText = totalPrice;
 }
-
-// //Update-case-price function
-// function updateCaseTotalPrice(newCaseNumber) {
-//   const caseTotalPrice = newCaseNumber * 59;
-//   const caseTotalElement = document.getElementById("updated-case-price");
-//   caseTotalElement.innerText = caseTotalPrice;
-// }
-// //Update-phone-price function
-// function updatePhoneTotalPrice(newPhoneNumber) {
-//   const phoneTotalPrice = newPhoneNumber * 1219;
-//   const phoneTotalElement = document.getElementById("updated-phone-price");
-//   phoneTotalElement.innerText = phoneTotalPrice;
-// }

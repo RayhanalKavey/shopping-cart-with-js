@@ -1,7 +1,7 @@
 "use strict";
 //Phone case + button
 document.getElementById("btn-case-plus").addEventListener("click", function () {
-  const newCaseNumber = updateCaseNumber(true);
+  const newCaseNumber = updateNumber(true, "case-number-field");
 
   updateTotalPrice(newCaseNumber, "updated-case-price");
 });
@@ -9,6 +9,6 @@ document.getElementById("btn-case-plus").addEventListener("click", function () {
 document
   .getElementById("btn-case-minus")
   .addEventListener("click", function () {
-    const newCaseNumber = updateCaseNumber(false);
+    const newCaseNumber = updateNumber(false, "case-number-field");
     updateTotalPrice(newCaseNumber, "updated-case-price");
   });
