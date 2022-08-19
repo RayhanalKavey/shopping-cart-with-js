@@ -59,15 +59,27 @@ function updatePhoneNumber(increase) {
   inputField.value = newPhoneNumber;
   return newPhoneNumber;
 }
-//Update-case-price function
-function updateCaseTotalPrice(newCaseNumber) {
-  const caseTotalPrice = newCaseNumber * 59;
-  const caseTotalElement = document.getElementById("updated-case-price");
-  caseTotalElement.innerText = caseTotalPrice;
+
+function updateTotalPrice(newNumber, priceElementID) {
+  const priceElement = document.getElementById(priceElementID);
+  let totalPrice;
+  if (priceElementID === "updated-case-price") {
+    totalPrice = newNumber * 59;
+  } else if (priceElementID === "updated-phone-price") {
+    totalPrice = newNumber * 1219;
+  }
+  priceElement.innerText = totalPrice;
 }
-//Update-phone-price function
-function updatePhoneTotalPrice(newPhoneNumber) {
-  const phoneTotalPrice = newPhoneNumber * 1219;
-  const phoneTotalElement = document.getElementById("updated-phone-price");
-  phoneTotalElement.innerText = phoneTotalPrice;
-}
+
+// //Update-case-price function
+// function updateCaseTotalPrice(newCaseNumber) {
+//   const caseTotalPrice = newCaseNumber * 59;
+//   const caseTotalElement = document.getElementById("updated-case-price");
+//   caseTotalElement.innerText = caseTotalPrice;
+// }
+// //Update-phone-price function
+// function updatePhoneTotalPrice(newPhoneNumber) {
+//   const phoneTotalPrice = newPhoneNumber * 1219;
+//   const phoneTotalElement = document.getElementById("updated-phone-price");
+//   phoneTotalElement.innerText = phoneTotalPrice;
+// }
