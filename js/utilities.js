@@ -42,6 +42,19 @@ function updateCaseNumber(increase) {
   inputField.value = newCaseNumber;
   return newCaseNumber;
 }
+//Update Phone number count
+function updatePhoneNumber(increase) {
+  const inputField = document.getElementById("phone-number-field");
+  const inputFieldValue = parseInt(inputField.value);
+  let newPhoneNumber;
+  if (increase === true) {
+    newPhoneNumber = inputFieldValue + 1;
+  } else {
+    newPhoneNumber = inputFieldValue - 1;
+  }
+  inputField.value = newPhoneNumber;
+  return newPhoneNumber;
+}
 //Update-price function
 function updateCaseTotalPrice(newCaseNumber) {
   const caseTotalPrice = newCaseNumber * 59;
