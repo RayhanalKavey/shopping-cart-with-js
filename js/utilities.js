@@ -1,11 +1,18 @@
 "use strict";
-//Get and Set input value Function (case number will a inteser number so we need to use parseInt)
-function getInputValueByID(ID) {
-  const inputField = document.getElementById(ID);
-  const inputValue = parseInt(inputField.value);
-  return inputValue;
-}
-function setInputValueByID(ID, newValue) {
-  const inputField = document.getElementById(ID);
-  inputField.value = newValue;
+
+//ParT Update + or - button funciton
+//(case number will a inteser number so we need to use parseInt)
+function updateCaseNumber(increase) {
+  const inputField = document.getElementById("case-number-field");
+  const previousCaseNumber = parseInt(inputField.value);
+  let newCaseNumber;
+  if (increase === true) {
+    newCaseNumber = previousCaseNumber + 1;
+  } else {
+    //case number cannot be negative
+    if (previousCaseNumber <= 1) {
+      newCaseNumber = 1;
+    } else newCaseNumber = previousCaseNumber - 1;
+  }
+  inputField.value = newCaseNumber;
 }
