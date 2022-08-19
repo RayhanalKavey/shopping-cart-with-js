@@ -32,20 +32,25 @@
 
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <button class="btn btn-default">
+                    <!--Phone - btn -->
+
+                    <button id="btn-phone-minus" class="btn btn-default">
                       <i class="fas fa-minus"></i>
                     </button>
                     <input
                       type="number"
                       min="0"
+                      id="phone-number-field"
                       class="form-control text-center"
                       value="1"
                     />
-                    <button class="btn btn-default">
+                    <!--Phone + btn -->
+
+                    <button id="btn-phone-plus" class="btn btn-default">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$1219</h5>
+                  <h5>$<span id="updated-phone-price">1219</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -59,7 +64,7 @@
                 </div>
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <!-- - btn -->
+                    <!--Case - btn -->
                     <button id="btn-case-minus" class="btn btn-default">
                       <i class="fas fa-minus"></i>
                     </button>
@@ -70,12 +75,12 @@
                       class="form-control text-center"
                       value="1"
                     />
-                    <!-- + btn -->
+                    <!--Case + btn -->
                     <button id="btn-case-plus" class="btn btn-default">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$59</h5>
+                  <h5>$<span id="updated-case-price">59</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -108,5 +113,6 @@
     <!-- LinKs-->
     <script src="js/utilities.js"></script>
     <script src="js/case.js"></script>
+    <script src="js/phone.js"></script>
   </body>
 </html>
