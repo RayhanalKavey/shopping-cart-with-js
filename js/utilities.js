@@ -50,14 +50,24 @@ function updatePhoneNumber(increase) {
   if (increase === true) {
     newPhoneNumber = inputFieldValue + 1;
   } else {
-    newPhoneNumber = inputFieldValue - 1;
+    if (inputFieldValue <= 0) {
+      newPhoneNumber = 0;
+    } else {
+      newPhoneNumber = inputFieldValue - 1;
+    }
   }
   inputField.value = newPhoneNumber;
   return newPhoneNumber;
 }
-//Update-price function
+//Update-case-price function
 function updateCaseTotalPrice(newCaseNumber) {
   const caseTotalPrice = newCaseNumber * 59;
   const caseTotalElement = document.getElementById("updated-case-price");
   caseTotalElement.innerText = caseTotalPrice;
+}
+//Update-phone-price function
+function updatePhoneTotalPrice(newPhoneNumber) {
+  const phoneTotalPrice = newPhoneNumber * 1219;
+  const phoneTotalElement = document.getElementById("updated-phone-price");
+  phoneTotalElement.innerText = phoneTotalPrice;
 }
