@@ -4,6 +4,7 @@ document.getElementById("btn-case-plus").addEventListener("click", function () {
   const newCaseNumber = updateNumber(true, "case-number-field");
 
   updateTotalPrice(newCaseNumber, "updated-case-price");
+  phoneAndCaseTotalCost();
 });
 //Phone case - button
 document
@@ -11,4 +12,5 @@ document
   .addEventListener("click", function () {
     const newCaseNumber = updateNumber(false, "case-number-field");
     updateTotalPrice(newCaseNumber, "updated-case-price");
+    phoneAndCaseTotalCost();
   });
